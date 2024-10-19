@@ -16,6 +16,7 @@ const features = [
     description: "We automatically save your files as you type.",
     href: "/guardar-archivos",
     cta: "Learn more",
+    background: <img src="https://i.postimg.cc/dQx4RwHp/028dd39ec4291fd4108469c5ed168ff1.jpg" alt="Feature background" className="absolute inset-0 w-full h-full object-cover " />,
   },
   {
     Icon: InputIcon,
@@ -23,6 +24,7 @@ const features = [
     description: "Search through all your files in one place.",
     href: "/busqueda-completa",
     cta: "Learn more",
+    background: <img src="https://i.postimg.cc/dQx4RwHp/028dd39ec4291fd4108469c5ed168ff1.jpg" alt="Feature background" className="absolute inset-0 w-full h-full object-cover " />,
   },
   {
     Icon: GlobeIcon,
@@ -30,6 +32,7 @@ const features = [
     description: "Supports 100+ languages and counting.",
     href: "/multilingue",
     cta: "Learn more",
+    background: <img src="https://i.postimg.cc/dQx4RwHp/028dd39ec4291fd4108469c5ed168ff1.jpg" alt="Feature background" className="absolute inset-0 w-full h-full object-cover " />,
   },
   {
     Icon: CalendarIcon,
@@ -37,6 +40,7 @@ const features = [
     description: "Use the calendar to filter your files by date.",
     href: "/calendario",
     cta: "Learn more",
+    background: <img src="https://i.postimg.cc/dQx4RwHp/028dd39ec4291fd4108469c5ed168ff1.jpg" alt="Feature background" className="absolute inset-0 w-full h-full object-cover " />,
   },
   {
     Icon: BellIcon,
@@ -45,6 +49,7 @@ const features = [
       "Get notified when someone shares a file or mentions you in a comment.",
     href: "/notificaciones",
     cta: "Learn more",
+    background: <img src="https://i.postimg.cc/dQx4RwHp/028dd39ec4291fd4108469c5ed168ff1.jpg" alt="Feature background" className="absolute inset-0 w-full h-full object-cover " />,
   },
 ];
 
@@ -54,41 +59,41 @@ export default function FeaturesSection() {
       <div className="container mx-auto px-4">
         <h2 className="text-3xl font-bold text-center mb-8">Características</h2>
         <div className="grid grid-cols-3 gap-4 h-full min-h-screen auto-rows-fr">
-  {/* Primera columna */}
-  <div className="flex flex-col gap-4 h-full">
-    <BentoCard
-      {...features[0]}
-      className="h-64 flex-grow bg-white shadow-lg rounded-lg p-6"
-    />
-    <BentoCard
-      {...features[1]}
-      className="h-32 flex-grow bg-white shadow-lg rounded-lg p-6"
-    />
-  </div>
+          {/* Primera columna */}
+          <div className="flex flex-col gap-4 h-full">
+            <BentoCard
+              {...features[0]}
+              className="h-64 flex-grow bg-white shadow-lg rounded-lg p-6 relative overflow-hidden"
+            />
+            <BentoCard
+              {...features[1]}
+              className="h-32 flex-grow bg-white shadow-lg rounded-lg p-6 relative overflow-hidden"
+            />
+          </div>
 
-  {/* Segunda columna */}
-  <div className="flex flex-col gap-4 h-full">
-    <BentoCard
-      {...features[2]}
-      className="h-32 flex-grow bg-white shadow-lg rounded-lg p-6"
-    />
-    <BentoCard
-      {...features[3]}
-      className="h-64 flex-grow bg-white shadow-lg rounded-lg p-6"
-    />
-  </div>
+          {/* Segunda columna */}
+          <div className="flex flex-col gap-4 h-full">
+            <BentoCard
+              {...features[2]}
+              className="h-32 flex-grow bg-white shadow-lg rounded-lg p-6 relative overflow-hidden"
+            />
+            <BentoCard
+              {...features[3]}
+              className="h-64 flex-grow bg-white shadow-lg rounded-lg p-6 relative overflow-hidden"
+            />
+          </div>
 
-  {/* Tercera columna */}
-  <div className="flex flex-col gap-4 h-full">
-    <BentoCard
-      {...features[4]}
-      className="h-64 flex-grow bg-white shadow-lg rounded-lg p-6"
-    />
-    <BentoCard
-      {...features[0]}
-      className="h-32 flex-grow bg-white shadow-lg rounded-lg p-6"
-    />
-  </div>
+          {/* Tercera columna */}
+          <div className="flex flex-col gap-4 h-full">
+            <BentoCard
+              {...features[4]}
+              className="h-64 flex-grow bg-white shadow-lg rounded-lg p-6 relative overflow-hidden"
+            />
+            <BentoCard
+              {...features[0]}
+              className="h-32 flex-grow bg-white shadow-lg rounded-lg p-6 relative overflow-hidden"
+            />
+          </div>
         </div>
       </div>
     </section>
