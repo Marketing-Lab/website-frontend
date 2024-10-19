@@ -63,11 +63,11 @@ export default function FeaturesSection() {
           <div className="flex flex-col gap-4 h-full">
             <BentoCard
               {...features[0]}
-              className="h-64 flex-grow bg-white shadow-lg rounded-lg p-6 relative overflow-hidden"
+              className="h-64 flex-grow bg-white text-white shadow-lg rounded-lg p-6 relative overflow-hidden"
             />
             <BentoCard
               {...features[1]}
-              className="h-32 flex-grow bg-white shadow-lg rounded-lg p-6 relative overflow-hidden"
+              className="h-32 flex-grow bg-white text-white shadow-lg rounded-lg p-6 relative overflow-hidden"
             />
           </div>
 
@@ -75,11 +75,11 @@ export default function FeaturesSection() {
           <div className="flex flex-col gap-4 h-full">
             <BentoCard
               {...features[2]}
-              className="h-32 flex-grow bg-white shadow-lg rounded-lg p-6 relative overflow-hidden"
+              className="h-32 flex-grow bg-white text-white shadow-lg rounded-lg p-6 relative overflow-hidden"
             />
             <BentoCard
               {...features[3]}
-              className="h-64 flex-grow bg-white shadow-lg rounded-lg p-6 relative overflow-hidden"
+              className="h-64 flex-grow bg-white text-white shadow-lg rounded-lg p-6 relative overflow-hidden"
             />
           </div>
 
@@ -87,11 +87,11 @@ export default function FeaturesSection() {
           <div className="flex flex-col gap-4 h-full">
             <BentoCard
               {...features[4]}
-              className="h-64 flex-grow bg-white shadow-lg rounded-lg p-6 relative overflow-hidden"
+              className="h-64 flex-grow bg-white text-white shadow-lg rounded-lg p-6 relative overflow-hidden"
             />
             <BentoCard
               {...features[0]}
-              className="h-32 flex-grow bg-white shadow-lg rounded-lg p-6 relative overflow-hidden"
+              className="h-32 flex-grow bg-white text-white shadow-lg rounded-lg p-6 relative overflow-hidden"
             />
           </div>
         </div>
