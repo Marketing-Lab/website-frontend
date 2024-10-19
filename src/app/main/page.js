@@ -1,8 +1,8 @@
 // Main.js
 import React from "react";
 import MainNavbar from "./MainNavbar";
-import heroImage from "../../assets/hero.png"; 
-import { BentoGrid, BentoCard } from "@/components/ui/bento-grid"; // Asegúrate de que la ruta sea correcta
+import heroImage from "../../assets/hero.png";
+import { BentoGrid, BentoCard } from "@/components/ui/bento-grid";
 import {
   BellIcon,
   CalendarIcon,
@@ -18,7 +18,7 @@ const features = [
     description: "Guardamos automáticamente tus archivos mientras escribes.",
     href: "/guardar-archivos",
     cta: "Aprende más",
-    background: <img className="absolute -right-20 -top-20 opacity-60" alt="" />, // Puedes reemplazar con una imagen real si lo deseas
+    background: <img className="absolute -right-20 -top-20 opacity-60" alt="" />,
     className: "lg:row-start-1 lg:row-end-4 lg:col-start-2 lg:col-end-3",
   },
   {
@@ -63,12 +63,9 @@ const features = [
 export default function Main() {
   return (
     <>
-      {/* Barra de Navegación */}
       <div className="w-screen">
         <MainNavbar />
       </div>
-
-      {/* Sección de Héroe */}
       <main
         className="relative flex flex-col items-center justify-center h-[calc(100vh-4rem)] bg-cover bg-center bg-no-repeat"
         style={{ backgroundImage: `url(${heroImage.src})` }}
@@ -76,21 +73,13 @@ export default function Main() {
         <h1 className="relative z-10 text-4xl font-bold text-white text-center px-4 md:text-6xl lg:text-7xl">
           Bienvenide
         </h1>
-        {/* Puedes agregar un overlay oscuro para mejorar la legibilidad */}
-        <div className="absolute inset-0 bg-black opacity-40"></div>
       </main>
-
-      {/* Sección Azul */}
       <section className="w-full bg-blue-500 py-16">
         <div className="text-center">
           <h2 className="text-3xl font-bold text-white mb-4">aaa</h2>
-          <p className="text-white text-lg px-4 md:px-20 lg:px-40">
-            aaa
-          </p>
+          <p className="text-white text-lg px-4 md:px-20 lg:px-40">aaa</p>
         </div>
       </section>
-      
-      {/* Sección del BentoGrid */}
       <section className="w-full py-16 bg-gray-100">
         <div className="container mx-auto px-4">
           <h2 className="text-3xl font-bold text-center mb-8">Características</h2>
