@@ -16,7 +16,16 @@ const features = [
     description: "We automatically save your files as you type.",
     href: "/guardar-archivos",
     cta: "Learn more",
-    background: <img src="https://i.postimg.cc/dQx4RwHp/028dd39ec4291fd4108469c5ed168ff1.jpg" alt="Feature background" className="absolute inset-0 w-full h-full object-cover " />,
+    background: (
+      <div className="absolute inset-0 w-full h-full">
+        <img
+          src="https://i.postimg.cc/dQx4RwHp/028dd39ec4291fd4108469c5ed168ff1.jpg"
+          alt="Feature background"
+          className="w-full h-full object-cover"
+        />
+        <div className="absolute inset-0 bg-gradient-to-t from-black via-transparent to-transparent opacity-70" />
+      </div>
+    ),
   },
   {
     Icon: InputIcon,
@@ -24,7 +33,16 @@ const features = [
     description: "Search through all your files in one place.",
     href: "/busqueda-completa",
     cta: "Learn more",
-    background: <img src="https://i.postimg.cc/dQx4RwHp/028dd39ec4291fd4108469c5ed168ff1.jpg" alt="Feature background" className="absolute inset-0 w-full h-full object-cover " />,
+    background: (
+      <div className="absolute inset-0 w-full h-full">
+        <img
+          src="https://i.postimg.cc/dQx4RwHp/028dd39ec4291fd4108469c5ed168ff1.jpg"
+          alt="Feature background"
+          className="w-full h-full object-cover"
+        />
+        <div className="absolute inset-0 bg-gradient-to-t from-black via-transparent to-transparent opacity-70" />
+      </div>
+    ),
   },
   {
     Icon: GlobeIcon,
@@ -32,7 +50,16 @@ const features = [
     description: "Supports 100+ languages and counting.",
     href: "/multilingue",
     cta: "Learn more",
-    background: <img src="https://i.postimg.cc/dQx4RwHp/028dd39ec4291fd4108469c5ed168ff1.jpg" alt="Feature background" className="absolute inset-0 w-full h-full object-cover " />,
+    background: (
+      <div className="absolute inset-0 w-full h-full">
+        <img
+          src="https://i.postimg.cc/dQx4RwHp/028dd39ec4291fd4108469c5ed168ff1.jpg"
+          alt="Feature background"
+          className="w-full h-full object-cover"
+        />
+        <div className="absolute inset-0 bg-gradient-to-t from-black via-transparent to-transparent opacity-70" />
+      </div>
+    ),
   },
   {
     Icon: CalendarIcon,
@@ -40,7 +67,16 @@ const features = [
     description: "Use the calendar to filter your files by date.",
     href: "/calendario",
     cta: "Learn more",
-    background: <img src="https://i.postimg.cc/dQx4RwHp/028dd39ec4291fd4108469c5ed168ff1.jpg" alt="Feature background" className="absolute inset-0 w-full h-full object-cover " />,
+    background: (
+      <div className="absolute inset-0 w-full h-full">
+        <img
+          src="https://i.postimg.cc/dQx4RwHp/028dd39ec4291fd4108469c5ed168ff1.jpg"
+          alt="Feature background"
+          className="w-full h-full object-cover"
+        />
+        <div className="absolute inset-0 bg-gradient-to-t from-black via-transparent to-transparent opacity-70" />
+      </div>
+    ),
   },
   {
     Icon: BellIcon,
@@ -49,7 +85,16 @@ const features = [
       "Get notified when someone shares a file or mentions you in a comment.",
     href: "/notificaciones",
     cta: "Learn more",
-    background: <img src="https://i.postimg.cc/dQx4RwHp/028dd39ec4291fd4108469c5ed168ff1.jpg" alt="Feature background" className="absolute inset-0 w-full h-full object-cover " />,
+    background: (
+      <div className="absolute inset-0 w-full h-full">
+        <img
+          src="https://i.postimg.cc/dQx4RwHp/028dd39ec4291fd4108469c5ed168ff1.jpg"
+          alt="Feature background"
+          className="w-full h-full object-cover"
+        />
+        <div className="absolute inset-0 bg-gradient-to-t from-black via-transparent to-transparent opacity-70" />
+      </div>
+    ),
   },
 ];
 
