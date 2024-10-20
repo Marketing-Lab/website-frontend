@@ -8,6 +8,7 @@ import FeaturesSection from "./FeaturesSection";
 import Images from "./Images";
 import MulticolorLine from "./MulticolorLine";
 import { FaShieldAlt, FaWater, FaSun, FaBullhorn } from 'react-icons/fa';
+import { motion } from 'framer-motion';
 
 export default function Main() {
   return (
@@ -30,30 +31,45 @@ export default function Main() {
         <h2 className="text-3xl font-bold text-center mb-8 font-poppins">Características</h2>
         <div className="flex justify-around items-center">
           <div className="flex flex-col items-center text-center">
-            <div className="bg-yellow-100 p-6 rounded-full mb-4">
-              <FaShieldAlt className="text-yellow-500 text-4xl" />
-            </div>
+            <motion.div 
+              className="bg-yellow-100 p-6 rounded-full mb-4"
+            >
+              <motion.div whileHover={{ scale: 1.2 }}>
+                <FaShieldAlt className="text-yellow-500 text-4xl" />
+              </motion.div>
+            </motion.div>
             <h3 className="text-lg font-semibold font-poppins">Material resistente</h3>
             <p className="text-sm text-gray-600 font-poppins">Durabilidad asegurada para cualquier evento.</p>
           </div>
           <div className="flex flex-col items-center text-center">
-            <div className="bg-blue-100 p-6 rounded-full mb-4">
-              <FaWater className="text-blue-500 text-4xl" />
-            </div>
+            <motion.div 
+              className="bg-blue-100 p-6 rounded-full mb-4"
+            >
+              <motion.div whileHover={{ y: -5 }}>
+                <FaWater className="text-blue-500 text-4xl" />
+              </motion.div>
+            </motion.div>
             <h3 className="text-lg font-semibold font-poppins">Impermeable</h3>
             <p className="text-sm text-gray-600 font-poppins">Protección contra cualquier clima.</p>
           </div>
           <div className="flex flex-col items-center text-center">
-            <div className="bg-red-100 p-6 rounded-full mb-4">
+            <motion.div 
+              className="bg-red-100 p-6 rounded-full mb-4"
+              whileHover={{ rotate: 15 }}
+            >
               <FaSun className="text-red-500 text-4xl" />
-            </div>
+            </motion.div>
             <h3 className="text-lg font-semibold font-poppins">Protección UV</h3>
             <p className="text-sm text-gray-600 font-poppins">Mantiene los colores vivos bajo el sol.</p>
           </div>
           <div className="flex flex-col items-center text-center">
-            <div className="bg-green-100 p-6 rounded-full mb-4">
-              <FaBullhorn className="text-green-500 text-4xl" />
-            </div>
+            <motion.div 
+              className="bg-green-100 p-6 rounded-full mb-4"
+            >
+              <motion.div whileHover={{ rotate: -10 }}>
+                <FaBullhorn className="text-green-500 text-4xl" />
+              </motion.div>
+            </motion.div>
             <h3 className="text-lg font-semibold font-poppins">Publicidad de impacto</h3>
             <p className="text-sm text-gray-600 font-poppins">Captura la atención con diseños únicos.</p>
           </div>
