@@ -3,6 +3,7 @@
 import { Avatar } from "@nextui-org/react";
 import Image from "next/image";
 import { useState } from "react";
+import { FaWhatsapp } from "react-icons/fa";
 
 export default function MainNavbar() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -13,18 +14,24 @@ export default function MainNavbar() {
   return (
     <nav className="w-screen h-16 bg-black text-white shadow-md flex items-center px-4 relative">
       {/* Logo */}
-      <div className="flex-none w-24">
+      <div className="w-16 mx-7">
         <Image
           src="https://i.postimg.cc/DznMTQSV/6066b025360d7867b0b6bea116b9d7ef.png"
           alt="MarketingLab Logo"
-          width={120}
-          height={40}
+          width={80}
+          height={30}
           className="object-contain"
         />
       </div>
 
+      {/* Número de teléfono */}
+      <div className="flex-none ml-4 flex items-center">
+        <FaWhatsapp className="text-green-500 mr-2" size={25} />
+        <span className="itetext-wh font-poppins font-normal text-base">+591 69440643</span>
+      </div>
+
       {/* Menú de Navegación */}
-      <div className="flex-1 flex justify-end items-center gap-8 pr-4 font-poppins text-base">
+      <div className="flex-1 flex justify-end items-center gap-8 pr-4 font-poppins font-light text-base">
         <a
           href="#nosotros"
           className="hover:text-gray-300 px-4 py-2 rounded-md transition-colors"
@@ -46,7 +53,7 @@ export default function MainNavbar() {
       </div>
 
       {/* Avatar y Menú Desplegable */}
-      <div className="flex-none w-10 flex items-center justify-center relative">
+      {/* <div className="flex-none w-10 flex items-center justify-center relative">
         <Avatar
           as="button"
           onClick={toggleMenu}
@@ -87,7 +94,7 @@ export default function MainNavbar() {
             </ul>
           </div>
         )}
-      </div>
+      </div> */}
     </nav>
   );
 }
