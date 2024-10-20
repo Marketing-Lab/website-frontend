@@ -1,6 +1,5 @@
 "use client";
 
-// Main.js
 import React, { useLayoutEffect, useRef, useState } from "react";
 import MainNavbar from "./MainNavbar";
 import heroImage from "../../assets/hero.png";
@@ -20,14 +19,17 @@ export default function Main() {
 
     const containerWidth = redContainerRef.current.offsetWidth;
 
+    const minFontSizeCREAMOS = 50;
+    const minFontSizeTuLoPiensas = 20;
+
     const calculatedFontSizeCREAMOS = Math.min(
-      Math.max(16, containerWidth / 5.5),
+      Math.max(minFontSizeCREAMOS, containerWidth / 5.5),
       200
     );
 
     const calculatedFontSizeTuLoPiensas = Math.min(
-      Math.max(12, containerWidth / 15.4),
-      200
+      Math.max(minFontSizeTuLoPiensas, containerWidth / 15.4),
+      72
     );
 
     return {
@@ -62,9 +64,14 @@ export default function Main() {
         <MainNavbar />
       </div>
       <main
-        className="relative flex flex-col items-center justify-center h-[calc(100vh-4rem)] bg-cover bg-center bg-no-repeat"
-        style={{ backgroundImage: `url(${heroImage.src})` }}
+        className="relative flex flex-col items-center justify-center h-[calc(100vh-4rem)] w-full"
       >
+        <img
+          src={heroImage.src}
+          alt="Hero Background"
+          className="absolute top-0 left-0 w-full h-full object-cover -z-10"
+          style={{ objectPosition: "center" }}
+        />
         <div
           className={`absolute top-0 left-0 w-[48%] h-full flex flex-col justify-start items-start px-12 lg:pl-24 lg:pr-12 bg-blue-0 bg-opacity-50 transition-opacity duration-300 ease-in-out ${
             isReady ? "opacity-100" : "opacity-0"
@@ -93,7 +100,7 @@ export default function Main() {
                   MarketingLAB es una empresa innovadora, especializada en inflables y soportes publicitarios, ofrecemos soluciones creativas y de alto impacto para capturar la atención.
                 </p>
                 <button
-                  className="mt-5 px-6 py-2 text-white font-poppins hover:bg-red-700 transition-colors duration-300 self-start"
+                  className="mt-5 px-6 py-2 text-white font-poppins hover:bg-[#A11220] hover:brightness-110 transition-all duration-300 self-start"
                   style={{ borderRadius: "15px", backgroundColor: "#DB182E" }}
                 >
                   Contáctanos
