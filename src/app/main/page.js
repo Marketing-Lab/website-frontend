@@ -41,8 +41,6 @@ export default function Main() {
       />
 
       <ProductList />
-      
-      <FeaturesSection />
     </>
   );
 }
