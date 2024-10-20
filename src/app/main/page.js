@@ -9,6 +9,7 @@ import Images from "./Images";
 import MulticolorLine from "./MulticolorLine";
 import Features from "./Features";
 import ImageGallery from "./ImageGallery";
+import ProductList from "./ProductList";
 
 export default function Main() {
   return (
@@ -28,7 +29,6 @@ export default function Main() {
           "https://i.postimg.cc/4Nm6YWKv/i4.jpg",
         ]}
       />
-
       <Features />
 
       <ImageGallery
@@ -40,6 +40,8 @@ export default function Main() {
         ]}
       />
 
+      <ProductList />
+      
       <FeaturesSection />
     </>
   );
