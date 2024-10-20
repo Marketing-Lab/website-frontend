@@ -7,44 +7,51 @@ import { useState } from "react";
 export default function MainNavbar() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
-  const toggleMenu = () => {
-    setIsMenuOpen(!isMenuOpen);
-  };
-
-  const closeMenu = () => {
-    setIsMenuOpen(false);
-  };
+  const toggleMenu = () => setIsMenuOpen(!isMenuOpen);
+  const closeMenu = () => setIsMenuOpen(false);
 
   return (
     <nav className="w-screen h-16 bg-black text-white shadow-md flex items-center px-4 relative">
+      {/* Logo */}
       <div className="flex-none w-24">
         <Image
-          src="https://i.imgur.com/ZGUx12p.png"
+          src="https://i.postimg.cc/DznMTQSV/6066b025360d7867b0b6bea116b9d7ef.png"
           alt="MarketingLab Logo"
-          width={50}
-          height={50}
-          className="rounded-md object-contain"
+          width={120}
+          height={40}
+          className="object-contain"
         />
       </div>
 
-      <div className="flex-1 flex justify-end items-center gap-8 pr-4">
-        <a href="#nosotros" className="text-white hover:text-gray-300 px-4 py-2 rounded-md">
+      {/* Menú de Navegación */}
+      <div className="flex-1 flex justify-end items-center gap-8 pr-4 font-poppins text-base">
+        <a
+          href="#nosotros"
+          className="hover:text-gray-300 px-4 py-2 rounded-md transition-colors"
+        >
           Nosotros
         </a>
-        <a href="#catalogo" className="text-white hover:text-gray-300 px-4 py-2 rounded-md">
+        <a
+          href="#catalogo"
+          className="hover:text-gray-300 px-4 py-2 rounded-md transition-colors"
+        >
           Catálogo
         </a>
-        <a href="#contacto" className="text-white hover:text-gray-300 px-4 py-2 rounded-md">
+        <a
+          href="#contacto"
+          className="hover:text-gray-300 px-4 py-2 rounded-md transition-colors"
+        >
           Contáctanos
         </a>
       </div>
 
+      {/* Avatar y Menú Desplegable */}
       <div className="flex-none w-10 flex items-center justify-center relative">
         <Avatar
           as="button"
           onClick={toggleMenu}
           src="https://i.pravatar.cc/150?u=a042581f4e29026704d"
-          alt="U"
+          alt="User Avatar"
           size="md"
         />
         {isMenuOpen && (
