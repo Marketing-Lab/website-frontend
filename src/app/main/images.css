@@ -1,0 +1,20 @@
+/* Images.css */
+
+@media (max-width: 768px) and (orientation: portrait) {
+    .images-container {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      grid-template-rows: repeat(2, 1fr);
+      height: auto;
+    }
+  
+    .images-container > div {
+      width: 100% !important;
+      height: auto !important;
+    }
+  
+    .images-container img {
+      height: 100%;
+    }
+  }
+  

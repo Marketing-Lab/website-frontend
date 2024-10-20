@@ -1,11 +1,12 @@
 // Images.js
 import React from "react";
+import "./Images.css";
 
 export default function Images({ images = [] }) {
   const placeholder = "https://via.placeholder.com/800x500";
 
   return (
-    <div className="w-full h-[80vh] flex">
+    <div className="images-container w-full h-[80vh] flex">
       <div className="w-1/2 h-full">
         <img 
           src={images[0] || placeholder} 
