@@ -13,7 +13,7 @@ import ImageGallery from "./ImageGallery";
 export default function Main() {
   return (
     <>
-      <div className="w-screen">
+      <div className="w-full">
         <MainNavbar />
       </div>
       <main className="relative flex flex-col items-center justify-center h-[calc(100vh-4rem)] w-full">

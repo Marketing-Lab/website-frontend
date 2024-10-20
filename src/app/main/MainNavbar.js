@@ -4,6 +4,7 @@ import { Avatar } from "@nextui-org/react";
 import Image from "next/image";
 import { useState } from "react";
 import { FaWhatsapp } from "react-icons/fa";
+import { FiMenu } from "react-icons/fi";
 
 export default function MainNavbar() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -12,9 +13,9 @@ export default function MainNavbar() {
   const closeMenu = () => setIsMenuOpen(false);
 
   return (
-    <nav className="w-screen h-16 bg-black text-white shadow-md flex items-center px-4 relative">
+    <nav className="w-full h-16 bg-black text-white shadow-md flex items-center px-4 relative">
       {/* Logo */}
-      <div className="w-16 mx-7">
+      <div className="w-16 mx-2 md:mx-7">
         <Image
           src="https://i.postimg.cc/DznMTQSV/6066b025360d7867b0b6bea116b9d7ef.png"
           alt="MarketingLab Logo"
@@ -25,76 +26,71 @@ export default function MainNavbar() {
       </div>
 
       {/* Número de teléfono */}
-      <div className="flex-none ml-4 flex items-center">
-        <FaWhatsapp className="text-green-500 mr-2" size={25} />
-        <span className="itetext-wh font-poppins font-normal text-base">+591 69440643</span>
+      <div className="flex-none ml-2 md:ml-4 flex items-center">
+        <FaWhatsapp className="text-green-500 mr-1 md:mr-2" size={20} />
+        <span className="font-poppins font-normal text-sm md:text-base">
+          +591 69440643
+        </span>
       </div>
 
       {/* Menú de Navegación */}
-      <div className="flex-1 flex justify-end items-center gap-8 pr-4 font-poppins font-light text-base">
-        <a
-          href="#nosotros"
-          className="hover:text-gray-300 px-4 py-2 rounded-md transition-colors"
-        >
-          Nosotros
-        </a>
-        <a
-          href="#catalogo"
-          className="hover:text-gray-300 px-4 py-2 rounded-md transition-colors"
-        >
-          Catálogo
-        </a>
-        <a
-          href="#contacto"
-          className="hover:text-gray-300 px-4 py-2 rounded-md transition-colors"
-        >
-          Contáctanos
-        </a>
+      <div className="flex-1 flex justify-end items-center pr-2 md:pr-4">
+        {/* Menú en pantallas medianas y grandes */}
+        <div className="hidden md:flex gap-4 font-poppins font-light text-base">
+          <a
+            href="#nosotros"
+            className="hover:text-gray-300 px-2 py-2 rounded-md transition-colors"
+          >
+            Nosotros
+          </a>
+          <a
+            href="#catalogo"
+            className="hover:text-gray-300 px-2 py-2 rounded-md transition-colors"
+          >
+            Catálogo
+          </a>
+          <a
+            href="#contacto"
+            className="hover:text-gray-300 px-2 py-2 rounded-md transition-colors"
+          >
+            Contáctanos
+          </a>
+        </div>
+
+        {/* Ícono de menú en pantallas pequeñas */}
+        <div className="md:hidden">
+          <button onClick={toggleMenu}>
+            <FiMenu size={24} />
+          </button>
+        </div>
       </div>
 
-      {/* Avatar y Menú Desplegable */}
-      {/* <div className="flex-none w-10 flex items-center justify-center relative">
-        <Avatar
-          as="button"
-          onClick={toggleMenu}
-          src="https://i.pravatar.cc/150?u=a042581f4e29026704d"
-          alt="User Avatar"
-          size="md"
-        />
-        {isMenuOpen && (
-          <div
-            className="absolute top-16 right-0 mt-2 w-48 bg-white text-black rounded-lg shadow-lg p-2 z-10"
-            onMouseLeave={closeMenu}
+      {/* Menú desplegable en pantallas pequeñas */}
+      {isMenuOpen && (
+        <div
+          className="absolute top-16 right-0 mt-2 w-full bg-black text-white shadow-lg p-4 flex flex-col items-center space-y-2 z-10 md:hidden"
+          onClick={closeMenu}
+        >
+          <a
+            href="#nosotros"
+            className="hover:text-gray-300 px-2 py-2 rounded-md transition-colors"
           >
-            <ul className="space-y-2">
-              <li>
-                <a
-                  href="#perfil"
-                  className="flex items-center gap-2 px-4 py-2 rounded-md hover:bg-gray-200 transition-colors"
-                >
-                  Perfil
-                </a>
-              </li>
-              <li>
-                <a
-                  href="#configuracion"
-                  className="flex items-center gap-2 px-4 py-2 rounded-md hover:bg-gray-200 transition-colors"
-                >
-                  Configuración
-                </a>
-              </li>
-              <li>
-                <a
-                  href="#cerrar-sesion"
-                  className="flex items-center gap-2 px-4 py-2 rounded-md hover:bg-gray-200 transition-colors"
-                >
-                  Cerrar Sesión
-                </a>
-              </li>
-            </ul>
-          </div>
-        )}
-      </div> */}
+            Nosotros
+          </a>
+          <a
+            href="#catalogo"
+            className="hover:text-gray-300 px-2 py-2 rounded-md transition-colors"
+          >
+            Catálogo
+          </a>
+          <a
+            href="#contacto"
+            className="hover:text-gray-300 px-2 py-2 rounded-md transition-colors"
+          >
+            Contáctanos
+          </a>
+        </div>
+      )}
     </nav>
   );
 }
