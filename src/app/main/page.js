@@ -41,6 +41,16 @@ export default function Main() {
       />
 
       <ProductList />
+
+      {/* Botón de Catálogo */}
+      <div className="w-full flex justify-center my-10">
+        <button
+          className="px-8 py-3 text-white bg-red-600 hover:bg-red-700 transition-all duration-300 rounded-full font-poppins"
+          onClick={() => window.location.href = "/catalogo"}
+        >
+          Ver Catálogo
+        </button>
+      </div>
     </>
   );
 }
