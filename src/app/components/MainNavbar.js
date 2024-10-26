@@ -4,6 +4,7 @@ import { useState, useEffect } from "react";
 import { FaWhatsapp } from "react-icons/fa";
 import { FiMenu } from "react-icons/fi";
 import Image from "next/image";
+import Link from "next/link";
 import { getNavbarData } from "../../services/cmsService";
 
 export default function MainNavbar() {
@@ -33,13 +34,15 @@ export default function MainNavbar() {
     <nav className="w-full h-16 bg-black text-white shadow-md flex items-center px-4 fixed top-0 left-0 z-50">
       <div className="w-16 mx-2 md:mx-7">
         {!loading && navbarData.logoUrl && (
-          <Image
-            src={navbarData.logoUrl}
-            alt="MarketingLab Logo"
-            width={80}
-            height={30}
-            className="object-contain"
-          />
+          <Link href="/main">
+            <Image
+              src={navbarData.logoUrl}
+              alt="MarketingLab Logo"
+              width={80}
+              height={30}
+              className="object-contain cursor-pointer"
+            />
+          </Link>
         )}
       </div>
 
@@ -56,24 +59,15 @@ export default function MainNavbar() {
 
       <div className="flex-1 flex justify-end items-center pr-2 md:pr-4">
         <div className="hidden md:flex gap-4 font-poppins font-light text-base">
-          <a
-            href="#nosotros"
-            className="hover:text-gray-300 px-2 py-2 rounded-md transition-colors"
-          >
-            Nosotros
-          </a>
-          <a
-            href="#catalogo"
-            className="hover:text-gray-300 px-2 py-2 rounded-md transition-colors"
-          >
+          <Link href="/catalogo" className="hover:text-gray-300 px-2 py-2 rounded-md transition-colors">
             Catálogo
-          </a>
-          <a
-            href="#contacto"
-            className="hover:text-gray-300 px-2 py-2 rounded-md transition-colors"
-          >
+          </Link>
+          <Link href="#nosotros" className="hover:text-gray-300 px-2 py-2 rounded-md transition-colors">
+            Nosotros
+          </Link>
+          <Link href="#contacto" className="hover:text-gray-300 px-2 py-2 rounded-md transition-colors">
             Contáctanos
-          </a>
+          </Link>
         </div>
 
         <div className="md:hidden">
@@ -88,24 +82,15 @@ export default function MainNavbar() {
           className="absolute top-16 right-0 mt-2 w-full bg-black text-white shadow-lg p-4 flex flex-col items-center space-y-2 z-10 md:hidden"
           onClick={closeMenu}
         >
-          <a
-            href="#nosotros"
-            className="hover:text-gray-300 px-2 py-2 rounded-md transition-colors"
-          >
-            Nosotros
-          </a>
-          <a
-            href="#catalogo"
-            className="hover:text-gray-300 px-2 py-2 rounded-md transition-colors"
-          >
+          <Link href="/categorias" className="hover:text-gray-300 px-2 py-2 rounded-md transition-colors">
             Catálogo
-          </a>
-          <a
-            href="#contacto"
-            className="hover:text-gray-300 px-2 py-2 rounded-md transition-colors"
-          >
+          </Link>
+          <Link href="#nosotros" className="hover:text-gray-300 px-2 py-2 rounded-md transition-colors">
+            Nosotros
+          </Link>
+          <Link href="#contacto" className="hover:text-gray-300 px-2 py-2 rounded-md transition-colors">
             Contáctanos
-          </a>
+          </Link>
         </div>
       )}
     </nav>
