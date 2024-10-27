@@ -1,14 +1,29 @@
 // HeroSection.js
-import React, { useLayoutEffect, useRef, useState } from "react";
+import React, { useLayoutEffect, useRef, useState, useEffect } from "react";
 import debounce from "lodash.debounce";
-
-const heroImageURL = "https://i.postimg.cc/qq7bCmpy/hero-1.png";
+import { getHeroImage } from "../../services/cmsService";
 
 export default function HeroSection() {
   const redContainerRef = useRef(null);
   const [fontSizeCREAMOS, setFontSizeCREAMOS] = useState(null);
   const [fontSizeTuLoPiensas, setFontSizeTuLoPiensas] = useState(null);
   const [isReady, setIsReady] = useState(false);
+  const [heroImageUrl, setHeroImageUrl] = useState("");
+  const [imageLoaded, setImageLoaded] = useState(false); 
+
+
+  useEffect(() => {
+    async function fetchImage() {
+      try {
+        const data = await getHeroImage();
+        setHeroImageUrl(data.heroImageUrl);
+      } catch (error) {
+        console.error("Error obteniendo la imagen del Hero:", error);
+      }
+    }
+
+    fetchImage();
+  }, []);
 
   const calculateFontSizes = () => {
     if (!redContainerRef.current) {
@@ -54,13 +69,24 @@ export default function HeroSection() {
   }, []);
 
   return (
-    <div className="relative flex flex-col items-center justify-center h-full w-full">
-      <img
-        src={heroImageURL}
-        alt="Hero Background"
-        className="absolute top-0 left-0 w-full h-full object-cover -z-10"
-        style={{ objectPosition: "center" }}
-      />
+    <div
+      className={`relative flex flex-col items-center justify-center h-full w-full transition-colors duration-500 ${
+        imageLoaded ? "bg-transparent" : "bg-black"
+      }`}
+    >
+      {heroImageUrl && (
+        <img
+          src={heroImageUrl}
+          alt="Hero Background"
+          className={`absolute top-0 left-0 w-full h-full object-cover -z-10 transition-opacity duration-500 ${
+            imageLoaded ? "opacity-100" : "opacity-0"
+          }`}
+          style={{ objectPosition: "center" }}
+          onLoad={() => setImageLoaded(true)}
+          onError={() => setImageLoaded(false)}
+        />
+      )}
+
       <div
         className={`absolute top-0 left-0 w-[48%] h-full flex flex-col justify-start items-start px-12 lg:pl-24 lg:pr-12 transition-opacity duration-300 ease-in-out ${
           isReady ? "opacity-100" : "opacity-0"
